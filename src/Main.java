@@ -22,16 +22,16 @@ public class Main {
             }
         } else {
             if (clientOS2 == 0) {
-                System.out.println("Установите приложения для ios по ссылке"); }
-            else if (clientOS2 == 1) {
-                System.out.println("Установите приложения для Android по ссылке"); }
-            else {
-                System.out.println("Неизвестная операционная система"); }
+                System.out.println("Установите приложения для ios по ссылке");
+            } else if (clientOS2 == 1) {
+                System.out.println("Установите приложения для Android по ссылке");
+            } else {
+                System.out.println("Неизвестная операционная система");
             }
+        }
 
         //Задача 3
         int year = 2024;
-
         if (year > 1584) {
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
                 System.out.println(year + " год является високосным");
@@ -44,51 +44,47 @@ public class Main {
 
         //Задача 4
         int deliveryDistance = 95;
-        int deliveryDays;
-        if (deliveryDistance <= 20) {
-            deliveryDays = 1;
-        } else if (deliveryDistance <= 60) {
-            deliveryDays = 2;
-        } else if (deliveryDistance <= 100) {
-            deliveryDays = 3;
-        } else {
-            deliveryDays = 0;
-            System.out.println("Доставка на данное расстояние невозможна.");
-        }
-        if (deliveryDays > 0)
-            System.out.println("Потребуется дней: " + deliveryDays);
+        int time;
 
-        //Задание 5
-        int monthNumber = 12;
-        if (monthNumber > 12 || monthNumber < 1) {
-            System.out.println("Неверный номер месяца.");
-            return;
+        if (deliveryDistance <= 20) {
+            time = 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            time = 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            time = 3;
+        } else {
+            time = -1;
         }
-        String season;
+        System.out.println("Потребуется дней " + time);
+
+    //Задача 5
+        int monthNumber = 12;
         switch (monthNumber) {
             case 12:
             case 1:
             case 2:
-                season = "зима";
+                System.out.println("Зима");
                 break;
             case 3:
             case 4:
             case 5:
-                season = "весна";
+                System.out.println("Весна");
                 break;
             case 6:
             case 7:
             case 8:
-                season = "лето";
+                System.out.println("Лето");
                 break;
             case 9:
             case 10:
             case 11:
-                season = "осень";
+                System.out.println("Осень");
                 break;
             default:
-                season = "Неизвестный сезон";
+                System.out.println("Неверный номер месяца");
         }
-        System.out.println(monthNumber + "-й месяц принадлежит к сезону " + season);
-        }
-        }
+    }
+}
+
+
+
